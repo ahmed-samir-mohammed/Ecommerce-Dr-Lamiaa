@@ -1,0 +1,962 @@
+body {
+  font-family: "Cairo", sans-serif !important;
+}
+a {
+  text-decoration: none !important;
+}
+.header {
+  background: url("../images/header1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
+}
+.navbar-head {
+  background-color: #93c4dc;
+}
+.navbar-section .nav-link {
+  color: white !important;
+  font-size: 18px;
+  margin: 0 30px;
+  font-weight: 200;
+}
+.navbar-section .active {
+  font-weight: 700;
+
+  border-bottom: 2px solid white;
+}
+
+.btn-action {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  padding: 10px 40px !important ;
+  border-radius: 20px;
+  background-color: white;
+  color: #363636 !important;
+}
+.header h2 {
+  font-size: 35px;
+  color: white;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  margin: 30px 0px;
+}
+
+.card1 {
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.card1 h4 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: auto;
+  background-color: #00000036;
+  padding: 8px 0px;
+  color: white;
+  border-radius: 0px 0px 25px 25px;
+  position: relative;
+  bottom: 35px;
+  font-size: 16px;
+}
+.browse {
+  margin: 100px 0px;
+}
+
+.browse h2,
+.product h2 {
+  color: #1f4a66;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+.buy {
+  background: url("../images/header2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+.buy h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+}
+.buy h4 {
+  font-size: 30px;
+  font-weight: 200;
+  color: white;
+  margin: 20px 0px 35px 0px;
+}
+.buy a {
+  padding: 10px 60px;
+  background-color: #bbda6f;
+  color: white;
+  border-radius: 20px;
+}
+.product img {
+  width: 50%;
+  margin: auto;
+  display: flex;
+}
+.product {
+  margin: 100px 0px;
+}
+.product-des {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.product .price-name p {
+  margin: 0;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 13px;
+}
+.product .price-name span {
+  color: #aaa0a0;
+  font-size: 11px;
+}
+.price-num {
+  color: #1f4a66;
+  font-weight: 700;
+}
+.price-cur {
+  color: #1f4a66;
+  font-size: 12px;
+}
+.product-card {
+  margin: 30px 0px;
+}
+.newsletter {
+  background: url("../images/newsletter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  margin-bottom: 100px;
+}
+.newsletter h2 {
+  font-size: 34px;
+  color: white;
+  font-weight: 700;
+}
+.newsletter h3 {
+  font-size: 28px;
+  color: white;
+  font-weight: 200;
+}
+.newsletter input[type="email"] {
+  height: 40px;
+  width: 45%;
+  border-radius: 20px;
+  border: none;
+  outline: 0;
+}
+.newsletter input[type="submit"] {
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #bbda6f;
+  color: white;
+  margin: 0px 15px;
+  font-size: 12px;
+}
+.about h3 {
+  color: #1f4a66;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.about p {
+  color: #1f4a66;
+  font-size: 20px;
+  font-weight: 400;
+}
+.about {
+  margin: 50px 0px 220px 0px;
+}
+.reviews {
+  background-color: #82badf;
+}
+.review-card {
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 10px 22px black;
+  height: 330px;
+  position: relative;
+  bottom: 80px;
+  border-radius: 30px;
+  padding: 50px;
+}
+.review-card .comment {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .row {
+  margin: auto;
+  height: 300px;
+}
+.footer .col-sm-4 {
+  margin: auto;
+}
+.footer .footer-links a {
+  color: black;
+  font-size: 14px;
+}
+.footer .social-link a {
+  margin: 2px;
+}
+.product-list .col-sm-4 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.product-list .col-sm-4 h5 {
+  color: #2c2c2c;
+  font-size: 17px;
+  margin-top: 30px;
+  font-weight: 700;
+}
+.product-list .col-sm-4 a {
+  padding: 7px 30px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+  color: #363636;
+  font-weight: 600;
+  border-radius: 30px;
+}
+.filter-section .search-name,
+.filter-section .search-brand,
+.filter-section .search-price {
+  border: 1px solid #e6e6e6;
+  padding: 18px;
+}
+.breadcrumb {
+  margin: 100px 0px 50px 0px;
+}
+.breadcrumb-item a {
+  color: black !important;
+  font-size: 18px;
+}
+.breadcrumb .active {
+  color: black !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+.product-info h3 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 22px;
+}
+.product-info span {
+  color: #4097aa;
+  font-weight: 700;
+}
+.product-info p {
+  color: #707070;
+  font-size: 14px;
+  margin: 20px 0px;
+  font-weight: 300;
+}
+.product-info a {
+  background-color: #4097aa;
+  padding: 7px 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+.product-info input {
+  margin: 0px 24px;
+
+  width: 44px;
+  padding: 5px;
+}
+.product-use {
+  margin-top: 50px;
+}
+.product-use h2 {
+  color: #4097aa;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.product-use p {
+  color: #707070;
+  font-size: 16px;
+  margin: 20px 0px;
+  font-weight: 300;
+}
+
+/* --------------- */
+
+.account-profile {
+  margin-top: 100px;
+}
+
+.star-rating input {
+  display: none;
+}
+.star-rating .modal-body {
+  margin: auto;
+  display: flex;
+}
+.star-rating label {
+  color: #f4cfa0;
+  transition: all 0.2s ease;
+  font-size: 30px;
+}
+.star-rating h5 {
+  color: #475a76;
+  font-size: 15px;
+  font-weight: 700;
+}
+.star-rating input:not(checked) ~ label:hover,
+.star-rating input:not(checked) ~ label:hover ~ label {
+  color: #f5aa4b;
+}
+.star-rating input:checked ~ label {
+  color: #f5aa4b;
+}
+.star-rating .text {
+  width: 70%;
+  margin: auto;
+}
+.star-rating textarea::placeholder {
+  color: #d5dee3;
+  padding: 5px;
+  font-size: 13px;
+}
+.star-rating .text span {
+  color: #475a76;
+  font-weight: 700;
+}
+.star-rating textarea {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ededed;
+  margin: 10px 0px;
+}
+
+.account-profile .col {
+  border: 2px solid #dfe3ef;
+  height: 100%;
+  border-radius: 10px;
+  padding: 5px 0px 20px 0px !important;
+}
+.account-profile .col #v-pills-tab a {
+  color: #3b4358;
+  font-weight: 700;
+  margin: 12px 10px;
+}
+.account-profile .col #v-pills-tab .active {
+  background-color: #f4f5f8;
+  border-radius: 5px;
+  width: 90%;
+  margin: 12px 10px;
+}
+.account-profile .main-profile-user {
+  border-bottom: 2px solid #dfe3ef;
+  padding: 15px 0px;
+
+  margin-bottom: 10px;
+}
+.main-profile-user img {
+  margin: 0px 20px;
+}
+.main-profile-user span {
+  color: #0071b7;
+  font-weight: 700;
+}
+.account-profile .edit-header-profile,
+.account-profile .location-main-header {
+  padding: 8px 20px 3px 20px;
+  background-color: #f4f5f8;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.account-profile .edit-header-profile h2,
+.account-profile .location-main-header h4 {
+  font-size: 18px;
+  color: #0071b7;
+  font-weight: 700;
+}
+.account-profile .profile-information,
+.account-profile .personal-information {
+  background-color: #f4f5f8;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 50px;
+  border-bottom: 1px solid #e4e5e6;
+}
+.account-profile .profile-information h2,
+.account-profile .personal-information h2,
+.account-profile .profile-insurance h2 {
+  font-size: 18px;
+  color: #3b4358;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.account-profile .profile-insurance {
+  background-color: #f4f5f8;
+
+  padding: 40px 50px;
+}
+.account-profile .profile-information span,
+.account-profile .personal-information span,
+.account-profile .profile-insurance span {
+  color: #616e8d;
+  font-size: 14px;
+}
+.account-profile .insurance-body {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.account-profile .profile-information a,
+.account-profile .personal-information a {
+  padding: 5px 35px;
+  text-decoration: none;
+  background-color: white;
+  color: #0071b7;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.account-profile .profile-insurance a {
+  padding: 5px 35px;
+  text-decoration: none;
+  background-color: #f4f5f8;
+  color: #0071b7;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.account-profile .profile-insurance .edit-btn {
+  margin-top: 10px;
+}
+.account-profile .profile-insurance .insurance-details {
+  width: 60%;
+  margin-top: 5px;
+}
+.account-profile .orders-header li {
+  width: 33.33%;
+  text-align: center;
+  background-color: #f4f5f8;
+  font-weight: 700;
+  font-size: 15px;
+}
+.account-profile .orders-header li a {
+  color: #0071b7;
+}
+.account-profile .orders-header li .active {
+  background-color: #f5aa4b;
+}
+.account-profile .order-card-body {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 0px 0px;
+  background-color: #f4f5f8;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+.account-profile .order-card-body h4 {
+  color: #3b4358;
+  font-size: 18px;
+  font-weight: 700;
+}
+.account-profile .order-card-body span {
+  color: #616e8d;
+  font-size: 12px;
+}
+.account-profile .location-main-body .order-card-body .order-span {
+  font-size: 25px;
+}
+.my-current-orders .finding-pharmacy {
+  font-size: 22px;
+  margin: 30px;
+}
+.account-profile .order-card-body .orders-details {
+  width: 45%;
+}
+label {
+  color: #0071b7;
+  margin-top: 10px;
+  font-weight: 700;
+}
+select {
+  color: #0071b7;
+}
+.account-profile .order-card-body .orders-action a {
+  padding: 4px 30px;
+  background-color: white;
+  font-size: 13px !important;
+  color: #0071b7;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.account-profile .orders-action div {
+  text-align: end;
+  margin-bottom: 20px;
+}
+.account-profile .order-card-body .orders-action a:last-of-type {
+  background-color: transparent;
+  border: 1px solid #0071b7;
+}
+.account-profile .order-card .collapse .card-body,
+.account-profile .order-card .collapsing .card-body {
+  border: none;
+}
+.account-profile .order-card .collapse .card-body .collapse-more-section,
+.account-profile .order-card .collapsing .card-body .collapse-more-section {
+  display: flex;
+  justify-content: center;
+}
+.account-profile .order-card .collapse .card-body h2,
+.account-profile .order-card .collapsing .card-body h2 {
+  font-size: 20px;
+  color: #3b4358;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.account-profile
+  .order-card
+  .collapse
+  .card-body
+  .collapse-more-section
+  div:last-of-type,
+.account-profile
+  .order-card
+  .collapsing
+  .card-body
+  .collapse-more-section
+  div:last-of-type {
+  width: 60%;
+  margin: 20px;
+}
+.account-profile
+  .order-card
+  .collapse
+  .card-body
+  .collapse-more-section
+  .img-with-details,
+.account-profile
+  .order-card
+  .collapsing
+  .card-body
+  .collapse-more-section
+  .img-with-details {
+  width: 100% !important;
+  margin: 15px 0px !important;
+  display: flex;
+}
+
+.account-profile .order-card .collapse .card-body .collapse-more-section span,
+.account-profile
+  .order-card
+  .collapsing
+  .card-body
+  .collapse-more-section
+  span {
+  color: #616e8d;
+  font-size: 14px;
+}
+
+.account-profile .order-card .collapse .card-body .collapse-more-section p,
+.account-profile .order-card .collapsing .card-body .collapse-more-section p {
+  color: #616e8d;
+  margin: 0px 20px;
+  font-size: 14px;
+}
+
+.account-profile .order-card .collapse .card-body a,
+.account-profile .order-card .collapsing .card-body a {
+  color: white;
+  font-size: 14px;
+  padding: 7px 30px;
+  background-color: #0071b7;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  width: 20%;
+  margin: auto;
+}
+
+.account-profile .order-card .collapse .card-body,
+.account-profile .order-card .collapsing .card-body {
+  background-color: #f4f5f8;
+}
+
+.account-profile .bookig-header li {
+  width: 50%;
+  text-align: center;
+  background-color: #f4f5f8;
+  font-weight: 700;
+  font-size: 15px;
+}
+.account-profile .bookig-header li a {
+  color: #0071b7;
+}
+.account-profile .bookig-header li .active {
+  background-color: #f5aa4b;
+}
+.account-profile
+  .my-current-booking
+  .order-card
+  .order-card-body
+  .orders-details
+  p,
+.account-profile
+  .my-previous-booking
+  .order-card
+  .order-card-body
+  .orders-details
+  p {
+  font-size: 14px;
+  color: #0071b7;
+  font-weight: 700;
+}
+.account-profile
+  .my-current-booking
+  .order-card
+  .order-card-body
+  .orders-action
+  a {
+  background: white;
+  border: none;
+}
+.account-profile
+  .my-current-booking
+  .order-card
+  .order-card-body
+  .orders-action
+  a:hover {
+  text-decoration: none;
+}
+
+.account-profile
+  .my-previous-booking
+  .order-card
+  .order-card-body
+  .orders-action
+  a:last-of-type {
+  padding: 3px 28px;
+}
+.account-profile .location-main-body .orders-details {
+  width: 60%;
+}
+.account-profile .location-main-body .order-card .pharmacy-img {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+.account-profile .location-main-body .orders-details a {
+  padding: 3px 30px;
+  border: 1px solid #0071b7;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.account-profile .location-main-body .orders-details span {
+  display: flex;
+}
+.account-profile .location-main-footer {
+  background-color: #f4f5f8;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0px;
+  border-radius: 8px;
+}
+.account-profile .location-main-footer a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0071b7;
+}
+
+/* wallet section */
+
+.contact-form .container {
+  width: 55%;
+  margin: 200px auto;
+}
+.contact-form input,
+textarea {
+  width: 90%;
+  border: 1px solid #d0ddf4;
+  border-radius: 5px;
+  outline: none;
+}
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form input {
+  height: 40px;
+  margin-bottom: 20px;
+}
+.contact-form button {
+  width: 18%;
+  height: 33px;
+  background-color: #0071b7;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  color: white;
+  margin-top: 15px;
+}
+.contact-form input[type="text"]:placeholder-shown {
+  color: #808798;
+  font-size: 13px;
+  padding-right: 10px;
+}
+.contact-form label {
+  color: #3b4358;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.contact-form h1 {
+  color: #0071b7;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+.contact-form .location,
+.phone,
+.email {
+  background-color: #f4f5f8;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.contact-form .map {
+  background: url(/images/mapscreen.png);
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+}
+.contact-form h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0071b7;
+  margin-top: 5px;
+  margin-bottom: 0px !important;
+}
+.contact-form span {
+  font-size: 11px;
+  color: #3b4358;
+}
+.checkout-form {
+  width: 70%;
+  margin: auto;
+}
+.checkout {
+  margin: 100px 0px;
+}
+.checkout-form label {
+  margin: 0px 6px;
+  font-size: 15px;
+  color: #3e94cd;
+  font-weight: 400;
+}
+.coupon {
+  color: #6e6e6e;
+  font-size: 14px;
+}
+.checkout-form input[type="text"] {
+  border: 1px solid #eaeaea;
+  height: 35px;
+  margin-top: 5px;
+
+  outline: none;
+  border-left: none;
+  position: relative;
+  z-index: 1;
+  width: 82%;
+}
+.confirm-coupon {
+  padding: 4px 10px;
+  background-color: #bbda6f;
+
+  font-size: 14px;
+  border-radius: 0px 6px 6px 0px;
+  color: white;
+  position: relative;
+  margin: 0px -12px;
+  z-index: 2;
+}
+.product-price,
+.discount-price,
+.delivery-price,
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  color: #949494;
+  font-size: 14px;
+}
+.product-price {
+  margin-top: 25px;
+}
+.confirmation {
+  margin-top: 35px;
+  text-align: center;
+}
+.confirmation a {
+  padding: 5px 45px;
+  background-color: #3e94cd;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+}
+.product-cart-img {
+  width: 35%;
+}
+.product-cart-img img {
+  width: 50%;
+  margin: auto;
+  display: flex;
+}
+.product-cart-detail {
+  display: flex;
+}
+.cart-step .col-sm-12 {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px;
+  border-bottom: 1px solid #eeeeee;
+}
+.product-cart-action {
+  margin: auto 0px;
+  display: flex;
+  justify-content: end;
+}
+.product-cart-action input {
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  padding: 3px 10px;
+  width: 30%;
+  outline: none;
+}
+.product-cart-action i {
+  color: #969696;
+  border: 1px solid #e8e8e8;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+.product-name h3 {
+  color: #545454;
+  font-size: 18px;
+  font-weight: 700;
+}
+.product-card-price span {
+  color: #1c1c1c;
+}
+.product-cart-name {
+  margin: auto 0px;
+}
+
+.payment-option {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.payment-option h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #302d3a;
+}
+.payment-option label {
+  color: #3e94cd;
+  font-size: 14px;
+  margin: 0px 10px;
+}
+.payment-step form input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #cac6d4;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+}
+.payment-step form input:placeholder-shown {
+  font-size: 13px;
+  padding: 0px 10px;
+  color: #7a7a7a;
+}
+.pay-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+.pay-btn a {
+  padding: 8px 70px;
+  color: white;
+  background-color: #3e94cd;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.information-step h2,
+.personal-step h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #302d3a;
+  margin-bottom: 40px;
+}
+.information-step label,
+.personal-step label {
+  color: #3b4358;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.information-step input,
+.personal-step input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #cac6d4;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+}
+.head-back {
+  background: url("../images/about-header.png");
+  height: 400px;
+  background-size: cover;
+}
+.head-back .row {
+  height: 400px;
+}
+.head-back .col-sm-12 {
+  display: flex;
+  margin: auto;
+}
+.head-back h1 {
+  margin: auto;
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+}
+.about-us {
+  margin: 100px 0px;
+}
+.about-us .row {
+  margin-bottom: 100px;
+}
+.about-us p {
+  color: #1f4a66;
+  font-size: 20px;
+  font-weight: 600;
+  width: 75%;
+  display: flex;
+  margin: auto;
+}
+.about-us img {
+  display: flex;
+  margin: auto;
+}
