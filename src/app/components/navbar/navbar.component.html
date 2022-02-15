@@ -1,7 +1,7 @@
 <section class="navbar-head">
     <nav class="navbar navbar-expand-lg navbar-light container">
         <a class="navbar-brand" routerLink="/">
-            <img src="../../../assets/images/logo1.svg" alt="">
+            <img src="../../../assets/images/logo1.svg" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,15 +28,23 @@
             </ul>
             <ul class="navbar-nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="../../../assets/images/search.svg" alt="" width="80%"></a>
+                    <a class="nav-link" href="#">
+                        <img src="../../../assets/images/search.svg" alt="Search">
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="../../../assets/images/cart.svg" alt="" width="70%"></a>
+                    <a class="nav-link" href="#">
+                        <img src="../../../assets/images/cart.svg" alt="Cart">
+                    </a>
                 </li>
-                <li class="nav-item my-ayto mx-0">
-                    <a class="nav-link btn-action" routerLink="/login"> تسجيل دخول </a>
+
+                <li class="nav-item my-auto mx-0">
+                    <a class="nav-link btn-action" (click)="loginModal()"> تسجيل دخول </a>
                 </li>
             </ul>
         </div>
     </nav>
 </section>
+
+<app-login></app-login>
+<app-register></app-register>

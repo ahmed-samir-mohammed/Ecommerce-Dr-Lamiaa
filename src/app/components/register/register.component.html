@@ -1,0 +1,38 @@
+<div class="register-modal justify-content-center align-items-center" id="register-modal">
+    <div class="register-form text-center">
+        <div class="d-flex jsutify-content-start">
+            <button type="button" class="btn d-flex jsutify-content-start" (click)="registerFormModal()">
+                <img src="../../../assets/images/close.svg">
+            </button>
+        </div>
+        <h5>تسجيل الدخول</h5>
+        <p class="mx-auto">هنا يكتب تفاصيل قصيره عن الصيدليه هنا يكتب تفاصيل قصيره عن الصيدليه</p>
+        <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+            <div class="form-group">
+                <input type="email" class="form-control px-3" formControlName="name" placeholder="الاسم بالكامل">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control px-3" formControlName="email" placeholder="البريد الالكتروني">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control px-3" formControlName="password" placeholder="الرقم السري">
+                <div class="switch-eye">
+                    <button class="btn" (click)="switchEye()">
+                        <i class="far" [ngClass]="{'fa-eye-slash': showPass, 'fa-eye': !showPass}"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-check my-3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    موافق علي الشروط والاحكام
+                </label>
+            </div>
+            <button type="submit">تسجيل دخول</button>
+        </form>
+        <p class="mx-auto mb-0">
+            لديك حساب؟
+            <a class="signup" (click)="goToLogin()">دخول الان</a>
+        </p>
+    </div>
+</div>

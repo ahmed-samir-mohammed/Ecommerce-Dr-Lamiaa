@@ -1,0 +1,26 @@
+.w-95 {
+  width: 95%;
+}
+
+.col-sm-5.text-center {
+  background-color: #f4f4f4;
+  padding: 40px 0px;
+  & ~ .col-sm-7 {
+    padding: 40px 100px;
+  }
+}
+
+.product-info {
+  span {
+    &:first-of-type {
+      font-size: 25px;
+    }
+    &:last-of-type {
+      font-size: 15px;
+    }
+  }
+}
+
+.mt-70 {
+  margin-top: 70px;
+}

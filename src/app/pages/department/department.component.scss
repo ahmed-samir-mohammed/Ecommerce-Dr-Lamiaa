@@ -1,0 +1,15 @@
+section {
+  margin: 100px 0px;
+}
+
+.product-list-info {
+  span {
+    color: #1f4a66;
+    &:first-of-type {
+      font-weight: 700;
+    }
+    &:last-of-type {
+      font-size: 12px;
+    }
+  }
+}

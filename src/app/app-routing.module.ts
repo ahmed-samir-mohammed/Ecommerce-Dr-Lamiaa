@@ -1,4 +1,3 @@
-import { RegisterComponent } from './pages/register/register.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ProductComponent } from './pages/product/product.component';
 import { DepartmentComponent } from './pages/department/department.component';
@@ -8,7 +7,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,8 +16,6 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'resgister', component: RegisterComponent },
 ];
 
 @NgModule({
