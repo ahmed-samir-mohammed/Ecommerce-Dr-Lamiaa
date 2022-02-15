@@ -1,0 +1,41 @@
+<div class="login-modal justify-content-center align-items-center" id="login-modal">
+    <div class="login-form text-center">
+        <div class="d-flex jsutify-content-start">
+            <button type="button" class="btn d-flex jsutify-content-start" (click)="loginModal()">
+                <img src="../../../assets/images/close.svg">
+            </button>
+        </div>
+        <h5>تسجيل الدخول</h5>
+        <p class="mx-auto">هنا يكتب تفاصيل قصيره عن الصيدليه هنا يكتب تفاصيل قصيره عن الصيدليه</p>
+        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+            <div class="form-group">
+                <input type="email" class="form-control px-3" formControlName="email" placeholder="البريد الالكتروني">
+            </div>
+            <div class="form-group">
+                <input [type]="inputType" class="form-control px-3" formControlName="password"
+                    placeholder="الرقم السري">
+                <div class="switch-eye">
+                    <button class="btn" (click)="switchEye()">
+                        <i class="far" [ngClass]="{'fa-eye-slash': showPass, 'fa-eye': !showPass}"></i>
+                    </button>
+                </div>
+            </div>
+            <a class="forget">نسيت كلمه السر؟</a>
+            <div class="social d-flex justify-content-between">
+                <button class="btn-gmail">
+                    <span>Gmail</span>
+                    <img src="../../../assets/images/gmail.svg">
+                </button>
+                <button class="btn-facebook">
+                    <span>Facebook</span>
+                    <img src="../../../assets/images/facebock.svg">
+                </button>
+            </div>
+            <button type="submit">تسجيل دخول</button>
+        </form>
+        <p class="mx-auto mb-0">
+            ليس لديك حساب؟
+            <a class="signup" (click)="goToRegister()">سجل الان</a>
+        </p>
+    </div>
+</div>
