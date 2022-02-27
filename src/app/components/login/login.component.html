@@ -5,37 +5,117 @@
                 <img src="../../../assets/images/close.svg">
             </button>
         </div>
-        <h5>تسجيل الدخول</h5>
-        <p class="mx-auto">هنا يكتب تفاصيل قصيره عن الصيدليه هنا يكتب تفاصيل قصيره عن الصيدليه</p>
-        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
-            <div class="form-group">
-                <input type="email" class="form-control px-3" formControlName="email" placeholder="البريد الالكتروني">
-            </div>
-            <div class="form-group">
-                <input [type]="inputType" class="form-control px-3" formControlName="password"
-                    placeholder="الرقم السري">
-                <div class="switch-eye">
-                    <button class="btn" (click)="switchEye()">
-                        <i class="far" [ngClass]="{'fa-eye-slash': showPass, 'fa-eye': !showPass}"></i>
+        <ng-container *ngIf="showLogin">
+            <h5>تسجيل الدخول</h5>
+            <p class="mx-auto">هنا يكتب تفاصيل قصيره عن الصيدليه هنا يكتب تفاصيل قصيره عن الصيدليه</p>
+            <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+                <div class="form-group">
+                    <input type="email" class="form-control px-3"
+                        [ngClass]="{'border-danger': loginEmailInput && loginEmailInput.invalid && loginEmailInput.touched}"
+                        formControlName="email" required placeholder="البريد الالكتروني">
+                    <div class="invalid-feedback d-block"
+                        *ngIf="loginEmailInput && loginEmailInput.invalid && loginEmailInput.touched">
+                        <div>يجب ان يكون مثل email@email.com</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input [type]="inputType" class="form-control px-3"
+                        [ngClass]="{'border-danger': loginPasswordInput && loginPasswordInput.invalid && loginPasswordInput.touched}"
+                        formControlName="password" required placeholder="الرقم السري">
+                    <div class="switch-eye">
+                        <button type="button" class="btn" (click)="switchEye()">
+                            <i class="far" [ngClass]="{'fa-eye-slash': showPass, 'fa-eye': !showPass}"></i>
+                        </button>
+                    </div>
+                    <div class="invalid-feedback d-block"
+                        *ngIf="loginPasswordInput && loginPasswordInput.invalid && loginPasswordInput.touched">
+                        <div>هذا الحقل مطلوب. </div>
+                    </div>
+                </div>
+                <a class="forget" (click)="openForgetPassword()">نسيت كلمه السر؟</a>
+                <div class="social d-flex justify-content-between">
+                    <button class="btn-gmail">
+                        <span>Gmail</span>
+                        <img src="../../../assets/images/gmail.svg">
+                    </button>
+                    <button class="btn-facebook">
+                        <span>Facebook</span>
+                        <img src="../../../assets/images/facebock.svg">
                     </button>
                 </div>
-            </div>
-            <a class="forget">نسيت كلمه السر؟</a>
-            <div class="social d-flex justify-content-between">
-                <button class="btn-gmail">
-                    <span>Gmail</span>
-                    <img src="../../../assets/images/gmail.svg">
-                </button>
-                <button class="btn-facebook">
-                    <span>Facebook</span>
-                    <img src="../../../assets/images/facebock.svg">
-                </button>
-            </div>
-            <button type="submit">تسجيل دخول</button>
-        </form>
-        <p class="mx-auto mb-0">
-            ليس لديك حساب؟
-            <a class="signup" (click)="goToRegister()">سجل الان</a>
-        </p>
+                <button type="submit" [disabled]="!loginForm.valid">تسجيل دخول</button>
+            </form>
+            <p class="mx-auto mb-0">
+                ليس لديك حساب؟
+                <a class="signup" (click)="goToRegister()">سجل الان</a>
+            </p>
+        </ng-container>
+        <ng-container *ngIf="showForgetPass">
+            <h5>نسيت كلمه المرور؟</h5>
+            <p class="mx-auto">سوف نرسل لك ٤ ارقام علي الايمل الشخصي لك لاعاده كلمه المرور</p>
+            <form [formGroup]="forgetForm" (ngSubmit)="forgetPassword(forgetForm)">
+                <div class="form-group">
+                    <input type="email" class="form-control px-3"
+                        [ngClass]="{'border-danger': forgetEmailInput && forgetEmailInput.invalid && forgetEmailInput.touched}"
+                        formControlName="email" required placeholder="البريد الالكتروني">
+                    <div class="invalid-feedback d-block"
+                        *ngIf="forgetEmailInput && forgetEmailInput.invalid && forgetEmailInput.touched">
+                        <div>يجب ان يكون مثل email@email.com</div>
+                    </div>
+                </div>
+                <button type="submit" [disabled]="!forgetForm.valid">التالى</button>
+            </form>
+        </ng-container>
+        <ng-container *ngIf="showResetPass">
+            <h5>نسيت كلمه المرور؟</h5>
+            <p class="mx-auto">ادخل ال٤ ارقام التي تم ارسالهم لك علي الاميل الخاص بك</p>
+            <form [formGroup]="resetForm" (ngSubmit)="resetPassword(resetForm)">
+                <div class="form-group">
+                    <input type="text" maxlength="4"
+                        [ngClass]="{'border-danger': varifyCodeInput && varifyCodeInput.invalid && varifyCodeInput.touched}"
+                        formControlName="varifyCode" class="form-control text-center">
+                    <div class="invalid-feedback d-block"
+                        *ngIf="varifyCodeInput && varifyCodeInput.invalid && varifyCodeInput.touched">
+                        <div> الرقم الذى ادخلته خطاء </div>
+                    </div>
+                </div>
+                <button type="submit" [disabled]="!resetForm.valid">التالى</button>
+            </form>
+        </ng-container>
+        <ng-container *ngIf="showNewPass">
+            <h5>تغيير كلمه السر</h5>
+            <p class="mx-auto">/p>
+            <form [formGroup]="newPassForm" (ngSubmit)="newPassword(newPassForm)">
+                <div class="form-group">
+                    <input [type]="inputType" class="form-control px-3"
+                        [ngClass]="{'border-danger': newPassEmailInput && newPassEmailInput.invalid && newPassEmailInput.touched}"
+                        required formControlName="newPassword" placeholder="الرقم السرى الجديد">
+                    <div class="switch-eye">
+                        <button type="button" class="btn" (click)="switchEye()">
+                            <i class="far" [ngClass]="{'fa-eye-slash': showPass, 'fa-eye': !showPass}"></i>
+                        </button>
+                    </div>
+                    <div class="invalid-feedback d-block"
+                        *ngIf="newPassEmailInput && newPassEmailInput.invalid && newPassEmailInput.touched">
+                        <div> الرقم الذى ادخلته خطاء </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input [type]="inputType" class="form-control px-3"
+                        [ngClass]="{'border-danger': ConfirmPasswordlInput && ConfirmPasswordlInput.invalid && ConfirmPasswordlInput.touched}"
+                        required formControlName="confirmPassword" placeholder="اعاده الرقم السري الجديد">
+                    <div class="switch-eye">
+                        <button type="button" class="btn" (click)="switchEye()">
+                            <i class="far" [ngClass]="{'fa-eye-slash': showPass, 'fa-eye': !showPass}"></i>
+                        </button>
+                    </div>
+                    <div class="invalid-feedback d-block"
+                        *ngIf="ConfirmPasswordlInput && ConfirmPasswordlInput.invalid && ConfirmPasswordlInput.touched">
+                        <div> الرقم الذى ادخلته خطاء </div>
+                    </div>
+                </div>
+                <button type="submit">حفظ</button>
+            </form>
+        </ng-container>
     </div>
 </div>
