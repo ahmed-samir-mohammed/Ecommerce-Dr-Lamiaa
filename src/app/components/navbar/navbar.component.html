@@ -38,9 +38,53 @@
                     </a>
                 </li>
 
-                <li class="nav-item my-auto mx-0">
+                <li class="nav-item my-auto mx-0" *ngIf="!isLogin">
                     <a class="nav-link btn-action" (click)="loginModal()"> تسجيل دخول </a>
                 </li>
+                <ng-container *ngIf="isLogin">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="ms-1" src="../../../assets/images/user.svg" alt="user">
+                            Ahmed Samir
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" routerLink="/profile">
+                                    <img class="ms-1" src="../../../assets/images/profile.svg" alt="user">
+                                    الملف الشخصي
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" (click)="logout()">
+                                    <img class="ms-1" src="../../../assets/images/log-out.svg" alt="user">
+                                    تسجيل الخروج
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="ms-1" src="../../../assets/images/egypt.png" alt="user">
+                            العربية
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item">
+                                    <img class="ms-1" src="../../../assets/images/egypt.png" alt="user">
+                                    العربية
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img class="ms-1" src="../../../assets/images/egypt.png" alt="user">
+                                    العربية
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ng-container>
             </ul>
         </div>
     </nav>

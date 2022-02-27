@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // rootLink: 'http://134.209.219.21:5500',
+  ROOT_API: 'http://134.209.219.21:5500/api',
 };
 
 /*

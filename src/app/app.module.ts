@@ -1,5 +1,7 @@
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { ProductComponent } from './pages/product/product.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+// import { AuthInterceptor } from './core/interceptor/authconfig.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,8 +37,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
     CheckoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+  ],
+  providers: [
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthInterceptor,
+    //   multi: true,
+    // },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
