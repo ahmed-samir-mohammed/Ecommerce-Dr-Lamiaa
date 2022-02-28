@@ -50,6 +50,7 @@ export class AuthentcationService {
   // }
 
   newPassword(body: NewPasswordModel): Observable<NewPasswordModel> {
+    debugger;
     return this.http.post<NewPasswordModel>(
       `${env.ROOT_API}/auth/changePassword`,
       body

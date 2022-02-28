@@ -184,18 +184,17 @@ export class LoginComponent implements OnInit {
   }
 
   newPassword(form: FormGroup) {
-    console.log(form);
+    console.log(form.value);
+    console.log(this.emailFrom);
     if (form.valid) {
       this.auth
         .newPassword({
-          email: this.emailFrom,
-          newPassword: this.newPassEmailInput?.value,
+          email: this.newPassEmailInput?.value,
+          newPassword: this.NewPasswordInput?.value,
           confirmPassword: this.ConfirmPasswordlInput?.value,
         })
         .subscribe(
-          (res: any) => {
-            console.log(res);
-          },
+          () => {},
           (err: any) => {
             console.log(err);
           },

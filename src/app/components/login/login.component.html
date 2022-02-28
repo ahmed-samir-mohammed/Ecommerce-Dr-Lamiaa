@@ -87,8 +87,17 @@
             <p class="mx-auto">أنشئ الرقم السري الجديد</p>
             <form [formGroup]="newPassForm" (ngSubmit)="newPassword(newPassForm)">
                 <div class="form-group">
-                    <input [type]="inputType" class="form-control px-3"
+                    <input type="email" class="form-control px-3"
                         [ngClass]="{'border-danger': newPassEmailInput && newPassEmailInput.invalid && newPassEmailInput.touched}"
+                        formControlName="email" required placeholder="البريد الالكتروني">
+                    <div class="invalid-feedback d-block"
+                        *ngIf="newPassEmailInput && newPassEmailInput.invalid && newPassEmailInput.touched">
+                        <div>يجب ان يكون مثل email@email.com</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input [type]="inputType" class="form-control px-3"
+                        [ngClass]="{'border-danger': NewPasswordInput && NewPasswordInput.invalid && NewPasswordInput.touched}"
                         required formControlName="newPassword" placeholder="الرقم السرى الجديد">
                     <div class="switch-eye">
                         <button type="button" class="btn" (click)="switchEye()">
@@ -96,7 +105,7 @@
                         </button>
                     </div>
                     <div class="invalid-feedback d-block"
-                        *ngIf="newPassEmailInput && newPassEmailInput.invalid && newPassEmailInput.touched">
+                        *ngIf="NewPasswordInput && NewPasswordInput.invalid && NewPasswordInput.touched">
                         <div> الرقم الذى ادخلته خطاء </div>
                     </div>
                 </div>
@@ -114,7 +123,7 @@
                         <div> الرقم الذى ادخلته خطاء </div>
                     </div>
                 </div>
-                <button type="submit">حفظ</button>
+                <button type="submit" [disabled]="!newPassForm.valid">حفظ</button>
             </form>
         </ng-container>
     </div>
